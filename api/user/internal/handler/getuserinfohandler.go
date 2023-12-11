@@ -2,7 +2,7 @@ package handler
 
 import (
 	"github.com/zeromicro/go-zero/rest/httpx"
-	"go-zero-demo/api/common/response"
+	xhttp "github.com/zeromicro/x/http"
 	"go-zero-demo/api/user/internal/logic"
 	"go-zero-demo/api/user/internal/svc"
 	"go-zero-demo/api/user/internal/types"
@@ -19,6 +19,10 @@ func getUserInfoHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 
 		l := logic.NewGetUserInfoLogic(r.Context(), svcCtx)
 		resp, err := l.GetUserInfo(&req)
-		response.Response(w, resp, err)
+		if err != nil {
+			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
+		} else {
+			xhttp.JsonBaseResponseCtx(r.Context(), w, resp)
+		}
 	}
 }

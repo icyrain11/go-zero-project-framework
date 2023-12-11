@@ -2,7 +2,10 @@ module go-zero-demo
 
 go 1.20
 
-require github.com/zeromicro/go-zero v1.6.0
+require (
+	github.com/zeromicro/go-zero v1.6.0
+	github.com/zeromicro/x v0.0.0-20230424055333-01c7fb9548d4
+)
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect

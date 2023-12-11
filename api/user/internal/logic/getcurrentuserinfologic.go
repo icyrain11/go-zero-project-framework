@@ -24,6 +24,5 @@ func NewGetCurrentUserInfoLogic(ctx context.Context, svcCtx *svc.ServiceContext)
 
 func (l *GetCurrentUserInfoLogic) GetCurrentUserInfo() (resp *types.GetUserInfoResp, err error) {
 	// todo: add your logic here and delete this line
-
 	return
 }

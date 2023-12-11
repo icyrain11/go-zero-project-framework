@@ -2,12 +2,11 @@ package logic
 
 import (
 	"context"
-	"fmt"
-	"github.com/zeromicro/go-zero/core/logc"
+	"github.com/zeromicro/go-zero/core/logx"
+	"github.com/zeromicro/x/errors"
+	error2 "go-zero-demo/api/user/internal/common/error"
 	"go-zero-demo/api/user/internal/svc"
 	"go-zero-demo/api/user/internal/types"
-
-	"github.com/zeromicro/go-zero/core/logx"
 )
 
 type GetUserInfoLogic struct {
@@ -25,11 +24,16 @@ func NewGetUserInfoLogic(ctx context.Context, svcCtx *svc.ServiceContext) *GetUs
 }
 
 func (l *GetUserInfoLogic) GetUserInfo(req *types.GetUserInfoReq) (resp *types.GetUserInfoResp, err error) {
-	// todo: add your logic here and delete this line
 	user, err := l.svcCtx.UserModel.FindOne(l.ctx, req.Id)
+	//用户不存在
 	if err != nil {
-		logc.Errorf(l.ctx, "userModel Operation err %", err)
+		err = errors.New(error2.UserNotFoundCode, error2.UserNotFound)
+		l.Logger.Errorf("UserModel Operation Error %v", err)
+		return nil, err
 	}
-	fmt.Println(user)
-	return
+
+	resp = new(types.GetUserInfoResp)
+	resp.Username = user.Username
+	resp.Id = user.Id
+	return resp, nil
 }

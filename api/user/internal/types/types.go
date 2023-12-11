@@ -8,9 +8,8 @@ type LoginReq struct {
 
 type LoginResp struct {
 	Id       int64  `json:"id"`
-	Name     string `json:"name"`
+	Username string `json:"username"`
 	Token    string `json:"token"`
-	ExpireAt string `json:"expireAt"`
 }
 
 type GetUserInfoReq struct {
@@ -18,6 +17,6 @@ type GetUserInfoReq struct {
 }
 
 type GetUserInfoResp struct {
-	Id   int64  `json:"id"`
-	Name string `json:"name"`
+	Id       int64  `json:"id"`
+	Username string `json:"username"`
 }

@@ -9,9 +9,8 @@ type (
 	// 定义登录接口的响应体
 	LoginResp {
 		Id       int64  `json:"id"`
-		Name     string `json:"name"`
+		Username string `json:"username"`
 		Token    string `json:"token"`
-		ExpireAt string `json:"expireAt"`
 	}
 )
 
@@ -22,8 +21,8 @@ type (
 	}
 
 	getUserInfoResp {
-		Id   int64  `json:"id"`
-		Name string `json:"name"`
+		Id       int64  `json:"id"`
+		Username string `json:"username"`
 	}
 )
 
@@ -35,7 +34,13 @@ service user-api {
 	//获取用户信息
 	@handler getUserInfo
 	get /user/info/:id (getUserInfoReq) returns (getUserInfoResp)
+}
 
+@server(
+	middleware : AuthorizeHandler
+)
+
+service user-api {
 	//获取当前登录用户
 	@handler getCurrentUserInfo
 	get /user/info/current returns (getUserInfoResp)

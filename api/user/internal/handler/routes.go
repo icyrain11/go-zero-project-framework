@@ -22,11 +22,19 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Path:    "/user/info/:id",
 				Handler: getUserInfoHandler(serverCtx),
 			},
-			{
-				Method:  http.MethodGet,
-				Path:    "/user/info/current",
-				Handler: getCurrentUserInfoHandler(serverCtx),
-			},
 		},
+	)
+
+	server.AddRoutes(
+		rest.WithMiddlewares(
+			[]rest.Middleware{serverCtx.AuthorizeHandler},
+			[]rest.Route{
+				{
+					Method:  http.MethodGet,
+					Path:    "/user/info/current",
+					Handler: getCurrentUserInfoHandler(serverCtx),
+				},
+			}...,
+		),
 	)
 }
