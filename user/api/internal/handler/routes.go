@@ -2,9 +2,8 @@
 package handler
 
 import (
+	"go-zero-demo/user/api/internal/svc"
 	"net/http"
-
-	"go-zero-demo/api/user/internal/svc"
 
 	"github.com/zeromicro/go-zero/rest"
 )

@@ -4,9 +4,9 @@ import (
 	"context"
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/x/errors"
-	error2 "go-zero-demo/api/user/internal/common/error"
-	"go-zero-demo/api/user/internal/svc"
-	"go-zero-demo/api/user/internal/types"
+	error2 "go-zero-demo/user/api/internal/error"
+	"go-zero-demo/user/api/internal/svc"
+	"go-zero-demo/user/api/internal/types"
 )
 
 type GetUserInfoLogic struct {

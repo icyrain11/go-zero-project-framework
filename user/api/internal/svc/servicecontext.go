@@ -4,9 +4,9 @@ import (
 	"github.com/zeromicro/go-zero/core/stores/redis"
 	"github.com/zeromicro/go-zero/core/stores/sqlx"
 	"github.com/zeromicro/go-zero/rest"
-	"go-zero-demo/api/user/internal/config"
-	"go-zero-demo/api/user/internal/middleware"
-	"go-zero-demo/model/mysql/user"
+	"go-zero-demo/user/api/internal/config"
+	"go-zero-demo/user/api/internal/middleware"
+	"go-zero-demo/user/model/mysql/user"
 )
 
 type ServiceContext struct {

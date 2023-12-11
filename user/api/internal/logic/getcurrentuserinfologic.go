@@ -2,10 +2,9 @@ package logic
 
 import (
 	"context"
-	"go-zero-demo/api/user/internal/svc"
-	"go-zero-demo/api/user/internal/types"
-
 	"github.com/zeromicro/go-zero/core/logx"
+	"go-zero-demo/user/api/internal/svc"
+	"go-zero-demo/user/api/internal/types"
 )
 
 type GetCurrentUserInfoLogic struct {

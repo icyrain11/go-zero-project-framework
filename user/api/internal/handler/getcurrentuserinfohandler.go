@@ -2,8 +2,8 @@ package handler
 
 import (
 	xhttp "github.com/zeromicro/x/http"
-	"go-zero-demo/api/user/internal/logic"
-	"go-zero-demo/api/user/internal/svc"
+	"go-zero-demo/user/api/internal/logic"
+	"go-zero-demo/user/api/internal/svc"
 	"net/http"
 )
 
