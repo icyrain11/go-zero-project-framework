@@ -7,10 +7,6 @@ type Config struct {
 	MySql struct {
 		DataSource string
 	}
-	Auth struct { // JWT 认证需要的密钥和过期时间配置
-		AccessSecret string
-		AccessExpire int64
-	}
 	Redis struct {
 		Host string
 		Type string `json:",default=node,options=node|cluster"`

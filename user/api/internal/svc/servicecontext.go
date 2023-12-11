@@ -27,7 +27,7 @@ func NewServiceContext(c config.Config) *ServiceContext {
 	})
 
 	//鉴权中间件
-	authorizeHandler := middleware.NewAuthorizeHandlerMiddleware().Handle
+	authorizeHandler := middleware.NewAuthorizeHandlerMiddleware(rds).Handle
 
 	return &ServiceContext{
 		Config:           c,

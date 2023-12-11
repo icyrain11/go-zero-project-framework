@@ -2,10 +2,12 @@ package logic
 
 import (
 	"context"
+	"encoding/json"
 	"github.com/google/uuid"
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/x/errors"
 	error2 "go-zero-demo/user/api/internal/error"
+	"go-zero-demo/user/api/internal/middleware"
 	"go-zero-demo/user/api/internal/svc"
 	"go-zero-demo/user/api/internal/types"
 )
@@ -40,12 +42,25 @@ func (l *LoginLogic) Login(req *types.LoginReq) (resp *types.LoginResp, err erro
 
 	newUUID, err := uuid.NewUUID()
 	token := newUUID.String()
+
 	if err != nil {
 		err = errors.New(50001, "服务器繁忙")
 		return
 	}
 
-	err = l.svcCtx.Redis.SetCtx(l.ctx, "token", token)
+	//防止用户上下文
+	userCtx := middleware.UserCtx{
+		Id:       user.Id,
+		Username: user.Username,
+	}
+
+	userCtxStr, err := json.Marshal(userCtx)
+	if err != nil {
+		err = errors.New(50001, "服务器繁忙")
+		return
+	}
+
+	err = l.svcCtx.Redis.SetexCtx(l.ctx, "user:login:"+token, string(userCtxStr), 86400)
 
 	if err != nil {
 		err = errors.New(50001, "服务器繁忙")

@@ -1,38 +1,58 @@
 package middleware
 
 import (
+	"context"
+	"encoding/json"
+	"github.com/zeromicro/go-zero/core/stores/redis"
 	"github.com/zeromicro/x/errors"
 	xhttp "github.com/zeromicro/x/http"
 	"net/http"
 )
 
 type AuthorizeHandlerMiddleware struct {
+	Redis *redis.Redis
 }
 
-func NewAuthorizeHandlerMiddleware() *AuthorizeHandlerMiddleware {
-	return &AuthorizeHandlerMiddleware{}
+func NewAuthorizeHandlerMiddleware(rds *redis.Redis) *AuthorizeHandlerMiddleware {
+	return &AuthorizeHandlerMiddleware{
+		Redis: rds,
+	}
 }
 
 func (m *AuthorizeHandlerMiddleware) Handle(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		//token
 		token := r.Header.Get("token")
-		if err := isValidToken(token); err != nil {
-			next(w, r)
-		} else {
+		userCtx, err := m.isValidToken(token)
+		if err != nil {
 			xhttp.JsonBaseResponseCtx(r.Context(), w, errors.New(400001, "用户未登录"))
+		} else {
+			next(w, r.WithContext(context.WithValue(r.Context(), "userCtx", userCtx)))
 		}
+
 	}
 }
 
-func isValidToken(token string) (err error) {
-	//TODO 先这么做吧
-	if err == nil {
-		return err
+type UserCtx struct {
+	Id       int64
+	Username string
+}
+
+func (m *AuthorizeHandlerMiddleware) isValidToken(token string) (userCtx *UserCtx, err error) {
+	userCtxStr, err := m.Redis.Get("user:login:" + token)
+	if err != nil {
+		return nil, err
 	}
-	//TODO 需要修改
-	if token == "" {
-		return err
+
+	if userCtxStr == "" {
+		return nil, err
 	}
-	return nil
+
+	err = json.Unmarshal([]byte(userCtxStr), &userCtx)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return userCtx, nil
 }

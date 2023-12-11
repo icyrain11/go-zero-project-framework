@@ -2,7 +2,9 @@ package logic
 
 import (
 	"context"
+	"fmt"
 	"github.com/zeromicro/go-zero/core/logx"
+	"go-zero-demo/user/api/internal/middleware"
 	"go-zero-demo/user/api/internal/svc"
 	"go-zero-demo/user/api/internal/types"
 )
@@ -22,6 +24,7 @@ func NewGetCurrentUserInfoLogic(ctx context.Context, svcCtx *svc.ServiceContext)
 }
 
 func (l *GetCurrentUserInfoLogic) GetCurrentUserInfo() (resp *types.GetUserInfoResp, err error) {
-	// todo: add your logic here and delete this line
+	userCtx := l.ctx.Value("userCtx").(*middleware.UserCtx)
+	fmt.Println(userCtx.Id)
 	return
 }
