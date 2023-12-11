@@ -1,0 +1,42 @@
+syntax = "v1"
+
+type (
+	// 定义登录接口的请求体
+	LoginReq {
+		Username string `json:"username"`
+		Password string `json:"password"`
+	}
+	// 定义登录接口的响应体
+	LoginResp {
+		Id       int64  `json:"id"`
+		Name     string `json:"name"`
+		Token    string `json:"token"`
+		ExpireAt string `json:"expireAt"`
+	}
+)
+
+type (
+	//通过id获取用户
+	getUserInfoReq {
+		Id int64 `path:"id"`
+	}
+
+	getUserInfoResp {
+		Id   int64  `json:"id"`
+		Name string `json:"name"`
+	}
+)
+
+service user-api {
+	//用户登录
+	@handler Login
+	post /user/login (LoginReq) returns (LoginResp)
+
+	//获取用户信息
+	@handler getUserInfo
+	get /user/info/:id (getUserInfoReq) returns (getUserInfoResp)
+
+	//获取当前登录用户
+	@handler getCurrentUserInfo
+	get /user/info/current returns (getUserInfoResp)
+}
