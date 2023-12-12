@@ -1,0 +1,62 @@
+syntax = "v1"
+
+type (
+    // 定义登录接口的请求体
+    LoginReq {
+        Username string `json:"username"`
+        Password string `json:"password"`
+    }
+
+        // 定义登录接口的响应体
+    LoginResp {
+        Id int64 `json:"id"`
+        Username string `json:"username"`
+        Token string `json:"token"`
+    }
+)
+
+type (
+    //通过id获取用户
+    GetUserInfoReq {
+        Id int64 `path:"id"`
+    }
+        // 定义登录接口的响应体
+    GetUserInfoResp {
+        Id int64 `json:"id"`
+        Username string `json:"username"`
+        Nickname string `json:"nickname"`
+        Gender string `json:"gender"`
+        Mobile string `json:"mobile"`
+    }
+)
+
+
+@server(
+    group : user
+    prefix : api/user
+)
+
+service api {
+    //用户登录
+    @handler Login
+    post /login (LoginReq) returns (LoginResp)
+
+    //获取用户信息
+    @handler GetUserInfo
+    get /info/:id (GetUserInfoReq) returns (GetUserInfoResp)
+}
+
+@server(
+    middleware : LoginStatus,Authorize
+    group : user
+    prefix : api/user
+)
+
+service api {
+    //获取当前登录用户
+    @handler GetCurrentUserInfo
+    get /info/current returns (GetUserInfoResp)
+    //退出登录
+    @handler Logout
+    post /logout
+}

@@ -5,15 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93179b84-fb4b-4222-a0e2-9ef399236d70" name="Changes" comment="feat: add user auth middleware">
+      <change afterPath="$PROJECT_DIR$/server/api/doc/api.api" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/doc/shorturl/shorturl.api" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/common/user/userctxholder.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/rpc/user/rpc/internal/constant/rediskey.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/api/response.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation/api/internal/handler/relationhandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/relation/api/internal/handler/relationhandler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/handler/loginhandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/api/internal/handler/loginhandler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/handler/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/api/internal/handler/routes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/logic/getuserinfologic.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/api/internal/logic/getuserinfologic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/logic/loginlogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/api/internal/logic/loginlogic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/middleware/loginstatusmiddleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/api/internal/middleware/loginstatusmiddleware.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/user.api" beforeDir="false" afterPath="$PROJECT_DIR$/user/api/user.api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/relation/api/etc/relation-api.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/relation/api/internal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/relation/api/internal/handler/relationhandler.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/relation/api/internal/handler/routes.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/relation/api/internal/logic/relationlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/relation/api/internal/svc/servicecontext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/relation/api/internal/types/types.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/relation/api/relation.api" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/relation/api/relation.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/etc/user-api.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/etc/api.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/error/clienterror.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/rpc/internal/error/clienterror.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/error/servererror.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/rpc/internal/error/servererror.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/handler/getcurrentuserinfohandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/user/getcurrentuserinfohandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/handler/getuserinfohandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/user/getuserinfohandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/handler/loginhandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/user/loginhandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/handler/logouthandler.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/handler/routes.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/logic/getcurrentuserinfologic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/logic/user/getcurrentuserinfologic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/logic/getuserinfologic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/logic/user/getuserinfologic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/logic/loginlogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/logic/user/loginlogic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/logic/logoutlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/middleware/authorizemiddleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/middleware/authorizemiddleware.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/middleware/loginstatusmiddleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/middleware/loginstatusmiddleware.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/svc/servicecontext.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/svc/servicecontext.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/types/types.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/types/types.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/user.api" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/doc/user/user.api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/user.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/model/mysql/user/user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/model/mysql/user/user.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/model/mysql/user/usermodel.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/model/mysql/user/usermodel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/model/mysql/user/usermodel_gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/model/mysql/user/usermodel_gen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/model/mysql/user/vars.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/model/mysql/user/vars.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/rpc/etc/user.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/rpc/internal/config/config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/rpc/internal/logic/pinglogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/rpc/internal/server/userserver.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/rpc/internal/svc/servicecontext.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/rpc/user.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/rpc/user.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/rpc/user/user.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/rpc/user/user_grpc.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/rpc/userclient/user.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +64,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Api Template" />
         <option value="Go File" />
       </list>
     </option>
@@ -50,6 +92,9 @@
     <setting file="file://$USER_HOME$/go/pkg/mod/github.com/zeromicro/go-zero@v1.6.0/rest/httpx/responses.go" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/../../Go/src/net/http/request.go" root0="SKIP_INSPECTION" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -58,80 +103,81 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/qiniu/go-zero-demo/user/api&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.notifications&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultApiTemplateProperty": "Api Template",
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "D:/qiniu/go-zero-demo/server/user/rpc",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.notifications",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\qiniu\go-zero-demo\user\api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\qiniu\go-zero-demo\base\api\response" />
-      <recent name="D:\qiniu\go-zero-demo\relation\api" />
-      <recent name="D:\qiniu\go-zero-demo\user\rpc" />
-      <recent name="D:\qiniu\go-zero-demo\user\api\internal" />
-      <recent name="D:\qiniu\go-zero-demo\user" />
+      <recent name="D:\qiniu\go-zero-demo\server\api\doc\shorturl" />
+      <recent name="D:\qiniu\go-zero-demo\server\rpc" />
+      <recent name="D:\qiniu\go-zero-demo\server\api\internal\logic\user" />
+      <recent name="D:\qiniu\go-zero-demo\server\api\internal\handler\user" />
+      <recent name="D:\qiniu\go-zero-demo\server\api" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build go-zero-demo/user/api">
-    <configuration name="go build go-zero-demo/api/user" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build go-zero-demo/server/api">
+    <configuration name="go build go-zero-demo/server/api" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-zero-demo" />
-      <working_directory value="$PROJECT_DIR$/api/user" />
+      <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go-zero-demo/api/user" />
+      <package value="go-zero-demo/server/api" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/api/user/user.go" />
+      <filePath value="$PROJECT_DIR$/server/api/api.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go-zero-demo/demo" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go-zero-demo/server/user/api" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-zero-demo" />
-      <working_directory value="$PROJECT_DIR$/demo" />
+      <working_directory value="$PROJECT_DIR$/server/user/api" />
       <kind value="PACKAGE" />
-      <package value="go-zero-demo/demo" />
+      <package value="go-zero-demo/server/user/api" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/demo/demo.go" />
+      <filePath value="$PROJECT_DIR$/server/user/api/user.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go-zero-demo/user/api" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go-zero-demo/server/user/rpc" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-zero-demo" />
-      <working_directory value="$PROJECT_DIR$/user/api" />
+      <working_directory value="$PROJECT_DIR$/server/user/rpc" />
       <kind value="PACKAGE" />
-      <package value="go-zero-demo/user/api" />
+      <package value="go-zero-demo/server/user/rpc" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/user/api/user.go" />
+      <filePath value="$PROJECT_DIR$/server/user/rpc/user.go" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build go-zero-demo/user/api" />
-      <item itemvalue="Go Build.go build go-zero-demo/api/user" />
-      <item itemvalue="Go Build.go build go-zero-demo/demo" />
+      <item itemvalue="Go Build.go build go-zero-demo/server/api" />
+      <item itemvalue="Go Build.go build go-zero-demo/server/user/rpc" />
+      <item itemvalue="Go Build.go build go-zero-demo/server/user/api" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build go-zero-demo/user/api" />
-        <item itemvalue="Go Build.go build go-zero-demo/api/user" />
-        <item itemvalue="Go Build.go build go-zero-demo/demo" />
+        <item itemvalue="Go Build.go build go-zero-demo/server/api" />
+        <item itemvalue="Go Build.go build go-zero-demo/server/user/rpc" />
+        <item itemvalue="Go Build.go build go-zero-demo/server/user/api" />
       </list>
     </recent_temporary>
   </component>

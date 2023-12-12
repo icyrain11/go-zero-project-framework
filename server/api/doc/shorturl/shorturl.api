@@ -1,0 +1,19 @@
+syntax = "v1"
+
+
+type (
+    GetShortUrlByIdReq {
+        Id int64 `path:"id"`
+    }
+)
+
+@server(
+    middleware : LoginStatus,Authorize
+    group : shorturl
+    prefix : api/short-url
+)
+
+service api {
+    @handler getShortUrlById
+    get /:id (GetShortUrlByIdReq)
+}
