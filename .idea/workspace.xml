@@ -4,57 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93179b84-fb4b-4222-a0e2-9ef399236d70" name="Changes" comment="feat: add user auth middleware">
-      <change afterPath="$PROJECT_DIR$/server/api/doc/api.api" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/api/doc/shorturl/shorturl.api" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/common/user/userctxholder.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/rpc/user/rpc/internal/constant/rediskey.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="93179b84-fb4b-4222-a0e2-9ef399236d70" name="Changes" comment="feat: modify project struct">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation/api/etc/relation-api.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation/api/internal/config/config.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation/api/internal/handler/relationhandler.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation/api/internal/handler/routes.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation/api/internal/logic/relationlogic.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation/api/internal/svc/servicecontext.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation/api/internal/types/types.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation/api/relation.api" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relation/api/relation.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/etc/user-api.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/etc/api.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/config/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/error/clienterror.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/rpc/internal/error/clienterror.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/error/servererror.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/rpc/internal/error/servererror.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/handler/getcurrentuserinfohandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/user/getcurrentuserinfohandler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/handler/getuserinfohandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/user/getuserinfohandler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/handler/loginhandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/user/loginhandler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/handler/logouthandler.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/handler/routes.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/logic/getcurrentuserinfologic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/logic/user/getcurrentuserinfologic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/logic/getuserinfologic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/logic/user/getuserinfologic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/logic/loginlogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/logic/user/loginlogic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/logic/logoutlogic.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/middleware/authorizemiddleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/middleware/authorizemiddleware.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/middleware/loginstatusmiddleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/middleware/loginstatusmiddleware.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/svc/servicecontext.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/svc/servicecontext.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/types/types.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/types/types.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/user.api" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/doc/user/user.api" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/user.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/model/mysql/user/user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/model/mysql/user/user.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/model/mysql/user/usermodel.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/model/mysql/user/usermodel.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/model/mysql/user/usermodel_gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/model/mysql/user/usermodel_gen.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/model/mysql/user/vars.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/model/mysql/user/vars.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/rpc/etc/user.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/rpc/internal/config/config.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/rpc/internal/logic/pinglogic.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/rpc/internal/server/userserver.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/rpc/internal/svc/servicecontext.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/rpc/user.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/rpc/user.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/rpc/user/user.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/rpc/user/user_grpc.pb.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/rpc/userclient/user.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/handler/user/logouthandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/user/logouthandler.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,9 +151,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat:init project" />
     <MESSAGE value="feat:add mysql and redis" />
-    <MESSAGE value="feat: modify project struct" />
     <MESSAGE value="feat: add user auth middleware" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add user auth middleware" />
+    <MESSAGE value="feat: modify project struct" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: modify project struct" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
