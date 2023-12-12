@@ -27,7 +27,7 @@ func (l *GetUserInfoLogic) GetUserInfo(req *types.GetUserInfoReq) (resp *types.G
 	user, err := l.svcCtx.UserModel.FindOne(l.ctx, req.Id)
 	//用户不存在
 	if err != nil {
-		err = errors.New(error2.UserNotFoundCode, error2.UserNotFound)
+		err = errors.New(error2.UserNotFoundErrorCode, error2.UserNotFoundErrorMsg)
 		l.Logger.Errorf("UserModel Operation Error %v", err)
 		return nil, err
 	}

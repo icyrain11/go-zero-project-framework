@@ -10,10 +10,11 @@ import (
 )
 
 type ServiceContext struct {
-	Config           config.Config
-	UserModel        user.UserModel
-	Redis            *redis.Redis
-	AuthorizeHandler rest.Middleware
+	Config      config.Config
+	UserModel   user.UserModel
+	Redis       *redis.Redis
+	Authorize   rest.Middleware
+	LoginStatus rest.Middleware
 }
 
 func NewServiceContext(c config.Config) *ServiceContext {
@@ -27,12 +28,15 @@ func NewServiceContext(c config.Config) *ServiceContext {
 	})
 
 	//鉴权中间件
-	authorizeHandler := middleware.NewAuthorizeHandlerMiddleware(rds).Handle
+	loginStatus := middleware.NewLoginStatusMiddleware(rds).Handle
+
+	authorize := middleware.NewAuthorizeMiddleware().Handle
 
 	return &ServiceContext{
-		Config:           c,
-		UserModel:        user.NewUserModel(sqlConn),
-		AuthorizeHandler: authorizeHandler,
-		Redis:            rds,
+		Config:      c,
+		UserModel:   user.NewUserModel(sqlConn),
+		Authorize:   authorize,
+		LoginStatus: loginStatus,
+		Redis:       rds,
 	}
 }

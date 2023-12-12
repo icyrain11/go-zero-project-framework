@@ -19,4 +19,7 @@ type GetUserInfoReq struct {
 type GetUserInfoResp struct {
 	Id       int64  `json:"id"`
 	Username string `json:"username"`
+	Nickname string `json:"nickname"`
+	Gender   string `json:"gender"`
+	Mobile   string `json:"mobile"`
 }

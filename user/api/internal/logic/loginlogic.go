@@ -32,18 +32,19 @@ func (l *LoginLogic) Login(req *types.LoginReq) (resp *types.LoginResp, err erro
 
 	//用户不存在
 	if err != nil {
-		err = errors.New(error2.UserNotFoundCode, error2.UserNotFound)
+		err = errors.New(error2.UserNotFoundErrorCode, error2.UserNotFoundErrorMsg)
 		return nil, err
 	}
 	//密码错误
 	if user.Password != req.Password {
-		err = errors.New(error2.UserPasswordErrorCode, error2.UserPasswordError)
+		err = errors.New(error2.UserPasswordErrorCode, error2.UserPasswordErrorMsg)
 	}
 
 	newUUID, err := uuid.NewUUID()
 	token := newUUID.String()
 
 	if err != nil {
+		l.Logger.Errorf("UUID Generate Error %v", err)
 		err = errors.New(50001, "服务器繁忙")
 		return
 	}
@@ -56,6 +57,7 @@ func (l *LoginLogic) Login(req *types.LoginReq) (resp *types.LoginResp, err erro
 
 	userCtxStr, err := json.Marshal(userCtx)
 	if err != nil {
+		l.Logger.Errorf("Json Marshal Error %v", err)
 		err = errors.New(50001, "服务器繁忙")
 		return
 	}

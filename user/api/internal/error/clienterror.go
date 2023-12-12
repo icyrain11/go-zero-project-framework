@@ -6,15 +6,15 @@ const (
 )
 
 const (
-	BadRequestMsg = "参数错误"
+	BadRequest = "参数错误"
 )
 
 const (
-	UserNotFoundCode = 40100 + iota
+	UserNotFoundErrorCode = 40100 + iota
 	UserPasswordErrorCode
 )
 
 const (
-	UserNotFound      = "用户不存在"
-	UserPasswordError = "密码错误"
+	UserNotFoundErrorMsg = "用户不存在"
+	UserPasswordErrorMsg = "密码错误"
 )

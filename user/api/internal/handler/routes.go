@@ -2,8 +2,9 @@
 package handler
 
 import (
-	"go-zero-demo/user/api/internal/svc"
 	"net/http"
+
+	"go-zero-demo/user/api/internal/svc"
 
 	"github.com/zeromicro/go-zero/rest"
 )
@@ -26,7 +27,7 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 
 	server.AddRoutes(
 		rest.WithMiddlewares(
-			[]rest.Middleware{serverCtx.AuthorizeHandler},
+			[]rest.Middleware{serverCtx.LoginStatus, serverCtx.Authorize},
 			[]rest.Route{
 				{
 					Method:  http.MethodGet,
