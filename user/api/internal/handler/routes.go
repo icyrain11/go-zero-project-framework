@@ -34,6 +34,11 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 					Path:    "/user/info/current",
 					Handler: getCurrentUserInfoHandler(serverCtx),
 				},
+				{
+					Method:  http.MethodPost,
+					Path:    "/user/logout",
+					Handler: logoutHandler(serverCtx),
+				},
 			}...,
 		),
 	)

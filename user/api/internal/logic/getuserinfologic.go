@@ -32,8 +32,11 @@ func (l *GetUserInfoLogic) GetUserInfo(req *types.GetUserInfoReq) (resp *types.G
 		return nil, err
 	}
 
-	resp = new(types.GetUserInfoResp)
-	resp.Username = user.Username
-	resp.Id = user.Id
-	return resp, nil
+	return &types.GetUserInfoResp{
+		Id:       user.Id,
+		Username: user.Username,
+		Nickname: user.Nickname,
+		Gender:   user.Gender,
+		Mobile:   user.Mobile,
+	}, nil
 }

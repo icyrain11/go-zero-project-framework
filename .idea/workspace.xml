@@ -5,20 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93179b84-fb4b-4222-a0e2-9ef399236d70" name="Changes" comment="feat: add user auth middleware">
-      <change afterPath="$PROJECT_DIR$/base/api/base.api" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base/api/response.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/api/internal/middleware/authorizemiddleware.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6148c690-21fc-4e91-9b37-9c7f4f5275fe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6148c690-21fc-4e91-9b37-9c7f4f5275fe.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/error/clienterror.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/api/internal/error/clienterror.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/api/response.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/relation/api/internal/handler/relationhandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/relation/api/internal/handler/relationhandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/handler/loginhandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/api/internal/handler/loginhandler.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/api/internal/handler/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/api/internal/handler/routes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/logic/getcurrentuserinfologic.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/api/internal/logic/getcurrentuserinfologic.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/api/internal/logic/getuserinfologic.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/api/internal/logic/getuserinfologic.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/api/internal/logic/loginlogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/api/internal/logic/loginlogic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/middleware/authorizehandlermiddleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/api/internal/middleware/loginstatusmiddleware.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/svc/servicecontext.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/api/internal/svc/servicecontext.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/api/internal/types/types.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/api/internal/types/types.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/api/internal/middleware/loginstatusmiddleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/user/api/internal/middleware/loginstatusmiddleware.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/api/user.api" beforeDir="false" afterPath="$PROJECT_DIR$/user/api/user.api" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,11 +87,11 @@
       <recent name="D:\qiniu\go-zero-demo\user\api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\qiniu\go-zero-demo\base\api\response" />
       <recent name="D:\qiniu\go-zero-demo\relation\api" />
       <recent name="D:\qiniu\go-zero-demo\user\rpc" />
       <recent name="D:\qiniu\go-zero-demo\user\api\internal" />
       <recent name="D:\qiniu\go-zero-demo\user" />
-      <recent name="D:\qiniu\go-zero-demo\api" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build go-zero-demo/user/api">

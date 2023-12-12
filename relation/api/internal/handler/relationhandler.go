@@ -1,14 +1,12 @@
 package handler
 
 import (
-	"net/http"
 	"github.com/zeromicro/go-zero/rest/httpx"
-	"xhttp "github.com/zeromicro/x/http""
-	"go-zero-demo/relation/internal/logic"
-	"go-zero-demo/relation/internal/svc"
-	"go-zero-demo/relation/internal/types"
-
-
+	xhttp "github.com/zeromicro/x/http"
+	"go-zero-demo/relation/api/internal/logic"
+	"go-zero-demo/relation/api/internal/svc"
+	"go-zero-demo/relation/api/internal/types"
+	"net/http"
 )
 
 func RelationHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
@@ -21,7 +19,7 @@ func RelationHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 
 		l := logic.NewRelationLogic(r.Context(), svcCtx)
 		resp, err := l.Relation(&req)
-        if err != nil {
+		if err != nil {
 			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
 		} else {
 			xhttp.JsonBaseResponseCtx(r.Context(), w, resp)

@@ -61,6 +61,7 @@ func (m *LoginStatusMiddleware) isValidToken(token string) (userCtx *UserCtx, er
 	}
 
 	if userCtxStr == "" {
+		err = errors.New(400001, "用户未登录")
 		return nil, err
 	}
 
