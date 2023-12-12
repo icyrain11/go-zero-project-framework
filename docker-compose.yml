@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  etcd-single:
+    image: gcr.io/etcd-development/etcd:v3.4.25
+    restart: on-failure
+    entrypoint: [ "/usr/local/bin/etcd", "--config-file", "/tmp/etcd/conf/etcd.yml" ]
+    ports:
+      - "2379:2379"
+      - "2380:2380"
+    environment:
+      ETCDCTL_API: 3
+    volumes:
+      - type: bind
+        source: /tmp/etcd/single/
+        target: /tmp/etcd

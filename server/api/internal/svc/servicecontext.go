@@ -2,25 +2,31 @@ package svc
 
 import (
 	"github.com/zeromicro/go-zero/rest"
+	"github.com/zeromicro/go-zero/zrpc"
 	"go-zero-demo/server/api/internal/config"
 	"go-zero-demo/server/api/internal/middleware"
-	user2 "go-zero-demo/server/rpc/user/rpc/pb/user"
+	"go-zero-demo/server/rpc/user/userclient"
 )
 
 type ServiceContext struct {
 	Config      config.Config
-	Authorize   rest.Middleware
 	LoginStatus rest.Middleware
-	user2.UserClient
+	Authorize   rest.Middleware
+	User        userclient.User
 }
 
 func NewServiceContext(c config.Config) *ServiceContext {
 
 	//鉴权中间件
 	authorize := middleware.NewAuthorizeMiddleware().Handle
+	user := userclient.NewUser(zrpc.MustNewClient(c.User))
+	//登录状态检查中间件
+	loginStatus := middleware.NewLoginStatusMiddleware(user).Handle
 
 	return &ServiceContext{
-		Config:    c,
-		Authorize: authorize,
+		Config:      c,
+		Authorize:   authorize,
+		User:        user,
+		LoginStatus: loginStatus,
 	}
 }

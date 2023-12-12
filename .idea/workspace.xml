@@ -5,8 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93179b84-fb4b-4222-a0e2-9ef399236d70" name="Changes" comment="feat: modify project struct">
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/common/error/servererror.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/rpc/user/internal/error/servererror.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/internal/handler/user/logouthandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/user/logouthandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/etc/api.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/etc/api.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/handler/user/getcurrentuserinfohandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/user/getcurrentuserinfohandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/logic/user/getcurrentuserinfologic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/logic/user/getcurrentuserinfologic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/logic/user/loginlogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/logic/user/loginlogic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/middleware/loginstatusmiddleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/middleware/loginstatusmiddleware.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/svc/servicecontext.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/svc/servicecontext.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/rpc/etc/user.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/etc/user.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/rpc/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/rpc/internal/constant/rediskey.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/constant/rediskey.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/rpc/internal/error/clienterror.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/error/clienterror.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/rpc/internal/error/servererror.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/common/error/clienterror.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/rpc/internal/logic/checkloginstatuslogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/logic/checkloginstatuslogic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/rpc/internal/logic/loginlogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/logic/loginlogic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/rpc/internal/server/userserver.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/server/userserver.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/rpc/internal/svc/servicecontext.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/svc/servicecontext.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/rpc/pb/user/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/pb/user/user.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/rpc/pb/user/user_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/pb/user/user_grpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/rpc/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/rpc/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/rpc/userclient/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/userclient/user.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +91,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "go.import.settings.migrated": "true",
-    "last_opened_file_path": "D:/qiniu/go-zero-demo/server/user/rpc",
+    "last_opened_file_path": "D:/qiniu/go-zero-demo/server/api",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "settings.editor.selected.configurable": "reference.settings.ide.settings.notifications",
@@ -85,30 +108,30 @@
       <recent name="D:\qiniu\go-zero-demo\user\api" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\qiniu\go-zero-demo\server\rpc\user" />
       <recent name="D:\qiniu\go-zero-demo\server\api\doc\shorturl" />
       <recent name="D:\qiniu\go-zero-demo\server\rpc" />
       <recent name="D:\qiniu\go-zero-demo\server\api\internal\logic\user" />
       <recent name="D:\qiniu\go-zero-demo\server\api\internal\handler\user" />
-      <recent name="D:\qiniu\go-zero-demo\server\api" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build go-zero-demo/server/api">
     <configuration name="go build go-zero-demo/server/api" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-zero-demo" />
-      <working_directory value="$PROJECT_DIR$" />
+      <working_directory value="$PROJECT_DIR$/server/api" />
       <kind value="PACKAGE" />
       <package value="go-zero-demo/server/api" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/server/api/api.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go-zero-demo/server/user/api" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go-zero-demo/server/rpc/user" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-zero-demo" />
-      <working_directory value="$PROJECT_DIR$/server/user/api" />
+      <working_directory value="$PROJECT_DIR$/server/rpc/user" />
       <kind value="PACKAGE" />
-      <package value="go-zero-demo/server/user/api" />
+      <package value="go-zero-demo/server/rpc/user" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/server/user/api/user.go" />
+      <filePath value="$PROJECT_DIR$/server/rpc/user/user.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build go-zero-demo/server/user/rpc" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -120,16 +143,45 @@
       <filePath value="$PROJECT_DIR$/server/user/rpc/user.go" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.docker-etcdkeeper: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="docker-etcdkeeper" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.docker-compose.yml.docker-etcdkeeper: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Go Build.go build go-zero-demo/server/api" />
+      <item itemvalue="Go Build.go build go-zero-demo/server/rpc/user" />
       <item itemvalue="Go Build.go build go-zero-demo/server/user/rpc" />
-      <item itemvalue="Go Build.go build go-zero-demo/server/user/api" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build go-zero-demo/server/api" />
+        <item itemvalue="Go Build.go build go-zero-demo/server/rpc/user" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.docker-etcdkeeper: Compose Deployment" />
         <item itemvalue="Go Build.go build go-zero-demo/server/user/rpc" />
-        <item itemvalue="Go Build.go build go-zero-demo/server/user/api" />
       </list>
     </recent_temporary>
   </component>

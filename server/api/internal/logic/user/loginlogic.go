@@ -5,6 +5,7 @@ import (
 	"github.com/zeromicro/go-zero/core/logx"
 	"go-zero-demo/server/api/internal/svc"
 	"go-zero-demo/server/api/internal/types"
+	"go-zero-demo/server/rpc/user/pb/user"
 )
 
 type LoginLogic struct {
@@ -22,5 +23,21 @@ func NewLoginLogic(ctx context.Context, svcCtx *svc.ServiceContext) *LoginLogic 
 }
 
 func (l *LoginLogic) Login(req *types.LoginReq) (resp *types.LoginResp, err error) {
-	return nil, nil
+	//调用rpc
+	in := &user.LoginReq{
+		Username: req.Username,
+		Password: req.Password,
+	}
+
+	out, err := l.svcCtx.User.Login(l.ctx, in)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return &types.LoginResp{
+		Id:       out.Id,
+		Username: out.Username,
+		Token:    out.Token,
+	}, nil
 }

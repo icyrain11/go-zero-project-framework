@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package user;
+option go_package = "./user";
+
+message LoginReq {
+  string Username = 1;
+  string Password = 2;
+}
+
+message LoginResp {
+  int64 Id = 1;
+  string Username = 2;
+  string Token = 3;
+}
+
+message CheckLoginStatusReq {
+  string Token = 1;
+}
+
+message UserCtx {
+  int64 Id = 1;
+  string Username = 2;
+}
+
+message CheckLoginStatusResp {
+  UserCtx UserCtx = 1;
+}
+
+service User {
+  rpc Login(LoginReq) returns(LoginResp);
+  rpc CheckLoginStatus (CheckLoginStatusReq) returns(CheckLoginStatusResp);
+}
