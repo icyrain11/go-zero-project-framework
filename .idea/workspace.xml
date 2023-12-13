@@ -4,196 +4,59 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93179b84-fb4b-4222-a0e2-9ef399236d70" name="Changes" comment="feat:  http connect rpc success">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/doc/shorturl/shorturl.api" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/doc/shorturl/shorturl.api" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/internal/handler/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/routes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/internal/types/types.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/types/types.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/common/user/userctxholder.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/common/user/userctxholder.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/rpc/user/internal/server/userserver.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/server/userserver.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/rpc/user/pb/user/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/pb/user/user.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/rpc/user/pb/user/user_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/pb/user/user_grpc.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/rpc/user/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/user.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/rpc/user/userclient/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/userclient/user.go" afterDir="false" />
+    <list default="true" id="9321bc3f-55be-44ef-9e96-4b24e3637bbd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/go-zero-project-framework.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6148c690-21fc-4e91-9b37-9c7f4f5275fe.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6148c690-21fc-4e91-9b37-9c7f4f5275fe/storage_v2/_src_/schema/go-zero.beS-CA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6148c690-21fc-4e91-9b37-9c7f4f5275fe/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6148c690-21fc-4e91-9b37-9c7f4f5275fe/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6148c690-21fc-4e91-9b37-9c7f4f5275fe/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6148c690-21fc-4e91-9b37-9c7f4f5275fe/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/go-zero-demo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Api Template" />
-        <option value="Go File" />
-      </list>
-    </option>
-  </component>
   <component name="GOROOT" url="file://$PROJECT_DIR$/../../Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="SYNC" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;icyrain11&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="51dce43c-01aa-46ba-b1e5-83b8360be6d5" />
-        <option name="url" value="git@github.com:icyrain11/go-zero-demo.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/go/pkg/mod/github.com/zeromicro/go-zero@v1.6.0/rest/httpx/responses.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/../../Go/src/net/http/request.go" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
-  <component name="ProjectId" id="2YVnyIHmFoHHx7gVeJschaaMIsz" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2ZUXkpIoAVmobgXlRPBF1yAA1Ad" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultApiTemplateProperty&quot;: &quot;Api Template&quot;,
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/qiniu/go-zero-demo/server/api&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.notifications&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "C:/Users/73493",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\qiniu\go-zero-demo\user\api" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\qiniu\go-zero-demo\server\rpc\user" />
-      <recent name="D:\qiniu\go-zero-demo\server\api\doc\shorturl" />
-      <recent name="D:\qiniu\go-zero-demo\server\rpc" />
-      <recent name="D:\qiniu\go-zero-demo\server\api\internal\logic\user" />
-      <recent name="D:\qiniu\go-zero-demo\server\api\internal\handler\user" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Go Build.go build go-zero-demo/server/api">
-    <configuration name="go build go-zero-demo/server/api" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go-zero-demo" />
-      <working_directory value="$PROJECT_DIR$/server/api" />
-      <kind value="PACKAGE" />
-      <package value="go-zero-demo/server/api" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/server/api/api.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build go-zero-demo/server/rpc/user" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go-zero-demo" />
-      <working_directory value="$PROJECT_DIR$/server/rpc/user" />
-      <kind value="PACKAGE" />
-      <package value="go-zero-demo/server/rpc/user" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/server/rpc/user/user.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build go-zero-demo/server/user/rpc" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="go-zero-demo" />
-      <working_directory value="$PROJECT_DIR$/server/user/rpc" />
-      <kind value="PACKAGE" />
-      <package value="go-zero-demo/server/user/rpc" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/server/user/rpc/user.go" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml">
-        <settings />
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml.docker-etcdkeeper: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="docker-etcdkeeper" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Docker.docker-compose.yml.docker-etcdkeeper: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-      <item itemvalue="Go Build.go build go-zero-demo/server/api" />
-      <item itemvalue="Go Build.go build go-zero-demo/server/rpc/user" />
-      <item itemvalue="Go Build.go build go-zero-demo/server/user/rpc" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Go Build.go build go-zero-demo/server/api" />
-        <item itemvalue="Go Build.go build go-zero-demo/server/rpc/user" />
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.docker-etcdkeeper: Compose Deployment" />
-        <item itemvalue="Go Build.go build go-zero-demo/server/user/rpc" />
-      </list>
-    </recent_temporary>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat:init project" />
-    <MESSAGE value="feat:add mysql and redis" />
-    <MESSAGE value="feat: add user auth middleware" />
-    <MESSAGE value="feat: modify project struct" />
-    <MESSAGE value="feat:  http connect rpc success" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:  http connect rpc success" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
