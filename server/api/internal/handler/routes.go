@@ -56,6 +56,11 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 					Path:    "/:id",
 					Handler: shorturl.GetShortUrlByIdHandler(serverCtx),
 				},
+				{
+					Method:  http.MethodPost,
+					Path:    "/",
+					Handler: shorturl.CreateShortUrlHandler(serverCtx),
+				},
 			}...,
 		),
 		rest.WithPrefix("/api/short-url"),

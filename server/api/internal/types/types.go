@@ -27,3 +27,7 @@ type GetUserInfoResp struct {
 type GetShortUrlByIdReq struct {
 	Id int64 `path:"id"`
 }
+
+type CreateShortUrlReq struct {
+	OriginalUrl string `json:"originalUrl"`
+}

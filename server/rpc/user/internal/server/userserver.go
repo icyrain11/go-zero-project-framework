@@ -27,7 +27,17 @@ func (s *UserServer) Login(ctx context.Context, in *user.LoginReq) (*user.LoginR
 	return l.Login(in)
 }
 
+func (s *UserServer) Logout(ctx context.Context, in *user.LoginReq) (*user.LogoutResp, error) {
+	l := logic.NewLogoutLogic(ctx, s.svcCtx)
+	return l.Logout(in)
+}
+
 func (s *UserServer) CheckLoginStatus(ctx context.Context, in *user.CheckLoginStatusReq) (*user.CheckLoginStatusResp, error) {
 	l := logic.NewCheckLoginStatusLogic(ctx, s.svcCtx)
 	return l.CheckLoginStatus(in)
+}
+
+func (s *UserServer) GetCurrentUser(ctx context.Context, in *user.GetCurrentUseReq) (*user.GetCurrentUserResp, error) {
+	l := logic.NewGetCurrentUserLogic(ctx, s.svcCtx)
+	return l.GetCurrentUser(in)
 }
