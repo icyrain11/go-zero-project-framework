@@ -22,7 +22,7 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 			{
 				Method:  http.MethodGet,
 				Path:    "/info/:id",
-				Handler: user.GetUserInfoHandler(serverCtx),
+				Handler: user.GetUserByIdHandler(serverCtx),
 			},
 		},
 		rest.WithPrefix("/api/user"),
@@ -35,7 +35,7 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				{
 					Method:  http.MethodGet,
 					Path:    "/info/current",
-					Handler: user.GetCurrentUserInfoHandler(serverCtx),
+					Handler: user.GetCurrentUserHandler(serverCtx),
 				},
 				{
 					Method:  http.MethodPost,

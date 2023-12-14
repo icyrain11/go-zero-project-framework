@@ -9,16 +9,16 @@ import (
 	"net/http"
 )
 
-func GetUserInfoHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
+func GetUserByIdHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		var req types.GetUserInfoReq
+		var req types.GetUserByIdReq
 		if err := httpx.Parse(r, &req); err != nil {
 			httpx.ErrorCtx(r.Context(), w, err)
 			return
 		}
 
-		l := user.NewGetUserInfoLogic(r.Context(), svcCtx)
-		resp, err := l.GetUserInfo(&req)
+		l := user.NewGetUserByIdLogic(r.Context(), svcCtx)
+		resp, err := l.GetUserById(&req)
 		if err != nil {
 			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
 		} else {

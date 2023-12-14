@@ -7,10 +7,10 @@ import (
 	"net/http"
 )
 
-func GetCurrentUserInfoHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
+func GetCurrentUserHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
-		l := user.NewGetCurrentUserInfoLogic(r.Context(), svcCtx)
-		resp, err := l.GetCurrentUserInfo()
+		l := user.NewGetCurrentUserLogic(r.Context(), svcCtx)
+		resp, err := l.GetCurrentUser()
 		if err != nil {
 			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
 		} else {

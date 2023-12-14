@@ -10,7 +10,8 @@ import (
 func LogoutHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		l := user.NewLogoutLogic(r.Context(), svcCtx)
-		err := l.Logout()
+		token := r.Header.Get("token")
+		err := l.Logout(token)
 		if err != nil {
 			xhttp.JsonBaseResponseCtx(r.Context(), w, err)
 		} else {

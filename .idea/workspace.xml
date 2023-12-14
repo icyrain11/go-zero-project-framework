@@ -4,14 +4,22 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="793c534e-115c-4e14-9985-fe1318326702" name="Changes" comment="feat : user logout">
-      <change afterPath="$PROJECT_DIR$/server/rpc/user/internal/constant/redisconstant.go" afterDir="false" />
+    <list default="true" id="793c534e-115c-4e14-9985-fe1318326702" name="Changes" comment="feat : add apigen.bat">
+      <change afterPath="$PROJECT_DIR$/script/apigen.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/idl/api.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/internal/logic/user/getcurrentuserlogic.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/internal/logic/user/getuserbyidlogic.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/rpc/user/internal/constant/rediskey.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/rpc/user/internal/logic/checkloginstatuslogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/logic/checkloginstatuslogic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/rpc/user/pb/user/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/pb/user/user.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/rpc/user/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/user.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/rpc/user/userclient/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/userclient/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/idl/user/user.api" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/idl/user/user.api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/handler/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/routes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/handler/user/getcurrentuserinfohandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/user/getcurrentuserhandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/handler/user/getuserinfohandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/user/getuserbyidhandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/handler/user/logouthandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/user/logouthandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/logic/user/logoutlogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/logic/user/logoutlogic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/svc/servicecontext.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/svc/servicecontext.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/types/types.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/types/types.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/common/error/clienterror.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/common/error/clienterror.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/internal/error/clienterror.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/error/clienterror.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +81,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat : user logout" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : user logout" />
+    <MESSAGE value="feat : checkUserLogin status" />
+    <MESSAGE value="feat : add apigen.bat" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : add apigen.bat" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

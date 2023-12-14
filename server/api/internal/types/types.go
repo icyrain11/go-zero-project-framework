@@ -12,11 +12,23 @@ type LoginResp struct {
 	Token    string `json:"token"`
 }
 
-type GetUserInfoReq struct {
+type GetUserByIdReq struct {
 	Id int64 `path:"id"`
 }
 
-type GetUserInfoResp struct {
+type GetCurrentUserReq struct {
+	Id int64 `path:"id"`
+}
+
+type GetCurrentUserResp struct {
+	Id       int64  `json:"id"`
+	Username string `json:"username"`
+	Nickname string `json:"nickname"`
+	Gender   string `json:"gender"`
+	Mobile   string `json:"mobile"`
+}
+
+type GetUserByIdResp struct {
 	Id       int64  `json:"id"`
 	Username string `json:"username"`
 	Nickname string `json:"nickname"`
@@ -30,4 +42,7 @@ type GetShortUrlByIdReq struct {
 
 type CreateShortUrlReq struct {
 	OriginalUrl string `json:"originalUrl"`
+}
+
+type CreateShorUrlResp struct {
 }

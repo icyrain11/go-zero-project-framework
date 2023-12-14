@@ -18,10 +18,10 @@ type ServiceContext struct {
 func NewServiceContext(c config.Config) *ServiceContext {
 
 	//鉴权中间件
-	authorize := middleware.NewAuthorizeMiddleware().Handle
 	user := userclient.NewUser(zrpc.MustNewClient(c.User))
 	//登录状态检查中间件
 	loginStatus := middleware.NewLoginStatusMiddleware(user).Handle
+	authorize := middleware.NewAuthorizeMiddleware().Handle
 
 	return &ServiceContext{
 		Config:      c,

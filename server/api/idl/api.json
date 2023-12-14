@@ -1,0 +1,320 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "type title here",
+    "description": "type desc here",
+    "version": "type version here"
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "api/short-url/": {
+      "post": {
+        "operationId": "CreateShortUrl",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/CreateShorUrlResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreateShortUrlReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "shorturl"
+        ]
+      }
+    },
+    "api/short-url/{id}": {
+      "get": {
+        "operationId": "GetShortUrlById",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {}
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "shorturl"
+        ]
+      }
+    },
+    "api/user/info/current": {
+      "get": {
+        "operationId": "GetCurrentUser",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GetCurrentUserResp"
+            }
+          }
+        },
+        "requestBody": {},
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "api/user/info/{id}": {
+      "get": {
+        "operationId": "GetUserById",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/GetUserByIdResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "api/user/login": {
+      "post": {
+        "operationId": "Login",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/LoginResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "description": " 定义登录接口的请求体",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/LoginReq"
+            }
+          }
+        ],
+        "requestBody": {},
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "api/user/logout": {
+      "post": {
+        "operationId": "Logout",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {}
+          }
+        },
+        "requestBody": {},
+        "tags": [
+          "user"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "CreateShorUrlResp": {
+      "type": "object",
+      "title": "CreateShorUrlResp"
+    },
+    "CreateShortUrlReq": {
+      "type": "object",
+      "properties": {
+        "originalUrl": {
+          "type": "string"
+        }
+      },
+      "title": "CreateShortUrlReq",
+      "required": [
+        "originalUrl"
+      ]
+    },
+    "GetCurrentUserReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "GetCurrentUserReq",
+      "required": [
+        "id"
+      ]
+    },
+    "GetCurrentUserResp": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "username": {
+          "type": "string"
+        },
+        "nickname": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "mobile": {
+          "type": "string"
+        }
+      },
+      "title": "GetCurrentUserResp",
+      "required": [
+        "id",
+        "username",
+        "nickname",
+        "gender",
+        "mobile"
+      ]
+    },
+    "GetShortUrlByIdReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "GetShortUrlByIdReq",
+      "required": [
+        "id"
+      ]
+    },
+    "GetUserByIdReq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "GetUserByIdReq",
+      "required": [
+        "id"
+      ]
+    },
+    "GetUserByIdResp": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "username": {
+          "type": "string"
+        },
+        "nickname": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "mobile": {
+          "type": "string"
+        }
+      },
+      "title": "GetUserByIdResp",
+      "required": [
+        "id",
+        "username",
+        "nickname",
+        "gender",
+        "mobile"
+      ]
+    },
+    "LoginReq": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      },
+      "title": "LoginReq",
+      "required": [
+        "username",
+        "password"
+      ]
+    },
+    "LoginResp": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "username": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "title": "LoginResp",
+      "required": [
+        "id",
+        "username",
+        "token"
+      ]
+    }
+  },
+  "securityDefinitions": {
+    "apiKey": {
+      "type": "apiKey",
+      "description": "Enter JWT Bearer token **_only_**",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "security": [
+    {
+      "apiKey": []
+    }
+  ]
+}

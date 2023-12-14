@@ -2,6 +2,7 @@ package user
 
 import (
 	"context"
+	"go-zero-demo/server/rpc/user/pb/user"
 
 	"github.com/zeromicro/go-zero/core/logx"
 	"go-zero-demo/server/api/internal/svc"
@@ -21,8 +22,14 @@ func NewLogoutLogic(ctx context.Context, svcCtx *svc.ServiceContext) *LogoutLogi
 	}
 }
 
-func (l *LogoutLogic) Logout() error {
-	// todo: add your logic here and delete this line
-
+func (l *LogoutLogic) Logout(token string) error {
+	in := &user.LogoutReq{
+		Token: token,
+	}
+	//退出登录
+	_, err := l.svcCtx.User.Logout(l.ctx, in)
+	if err != nil {
+		return err
+	}
 	return nil
 }
