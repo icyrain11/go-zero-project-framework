@@ -3,8 +3,8 @@ package svc
 import (
 	"github.com/zeromicro/go-zero/core/stores/redis"
 	"github.com/zeromicro/go-zero/core/stores/sqlx"
+	"go-zero-demo/internal/model/mysql/user"
 	"go-zero-demo/server/rpc/user/internal/config"
-	"go-zero-demo/server/rpc/user/model/mysql/user"
 )
 
 type ServiceContext struct {

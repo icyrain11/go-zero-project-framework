@@ -2,6 +2,7 @@ package user
 
 import (
 	"context"
+	"go-zero-demo/server/rpc/user/pb/user"
 
 	"go-zero-demo/server/api/internal/svc"
 	"go-zero-demo/server/api/internal/types"
@@ -23,8 +24,19 @@ func NewGetCurrentUserLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Ge
 	}
 }
 
-func (l *GetCurrentUserLogic) GetCurrentUser() (resp *types.GetCurrentUserResp, err error) {
-	// todo: add your logic here and delete this line
-
-	return
+func (l *GetCurrentUserLogic) GetCurrentUser(token string) (resp *types.GetCurrentUserResp, err error) {
+	in := &user.GetCurrentUseReq{
+		Token: token,
+	}
+	out, err := l.svcCtx.User.GetCurrentUser(l.ctx, in)
+	if err != nil {
+		return nil, err
+	}
+	return &types.GetCurrentUserResp{
+		Id:       out.Id,
+		Username: out.Username,
+		Nickname: out.Nickname,
+		Gender:   out.Gender,
+		Mobile:   out.Mobile,
+	}, nil
 }

@@ -5,6 +5,7 @@ const (
 	RedisExpireErrorCode
 	RedisDelErrorCode
 	JsonUnmarshalErrorCode
+	DocumentFromReaderErrorCode
 )
 
 const (

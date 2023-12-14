@@ -3,7 +3,7 @@ package middleware
 import (
 	"context"
 	xhttp "github.com/zeromicro/x/http"
-	common "go-zero-demo/server/common/user"
+	"go-zero-demo/internal/user"
 	"go-zero-demo/server/rpc/user/pb/user"
 	"go-zero-demo/server/rpc/user/userclient"
 	"net/http"
@@ -32,8 +32,8 @@ func (m *LoginStatusMiddleware) Handle(next http.HandlerFunc) http.HandlerFunc {
 		}
 
 		userCtx := common.UserCtx{
-			Id:       out.UserCtx.Id,
-			Username: out.UserCtx.Username,
+			Id:       out.Id,
+			Username: out.Username,
 		}
 
 		next(w, r.WithContext(context.WithValue(r.Context(), "userCtx", userCtx)))

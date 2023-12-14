@@ -6,14 +6,12 @@ type (
         Username string `json:"username"`
         Password string `json:"password"`
     }
-
         // 定义登录接口的响应体
     LoginResp {
         Id int64 `json:"id"`
         Username string `json:"username"`
         Token string `json:"token"`
     }
-
 )
 
 type (
@@ -56,7 +54,7 @@ service api {
 
     //获取用户信息
     @handler GetUserById
-    get /info/:id (GetUserByIdReq) returns (GetUserByIdResp)
+    get /:id (GetUserByIdReq) returns (GetUserByIdResp)
 }
 
 @server(
@@ -68,7 +66,7 @@ service api {
 service api {
     //获取当前登录用户
     @handler GetCurrentUser
-    get /info/current returns (GetCurrentUserResp)
+    get /current returns (GetCurrentUserResp)
     //退出登录
     @handler Logout
     post /logout

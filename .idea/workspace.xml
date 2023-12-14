@@ -5,26 +5,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="793c534e-115c-4e14-9985-fe1318326702" name="Changes" comment="feat : add apigen.bat">
-      <change afterPath="$PROJECT_DIR$/script/apigen.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/api/idl/api.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/api/internal/logic/user/getcurrentuserlogic.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/api/internal/logic/user/getuserbyidlogic.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/error/remoteerror.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/model/mysql/uploadtask/uploadtask.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/model/mysql/video/video.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/remote/qiniu/kodo.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/remote/qiniu/provider.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/user/userctxholder.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/idl/feed/feed.api" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/idl/item/item.api" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/api/idl/relation/relation.api" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/rpc/item/internal/error/clienterror.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/rpc/item/internal/error/servererror.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/apigen.bat" beforeDir="false" afterPath="$PROJECT_DIR$/script/apigen.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/idl/api.api" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/idl/api.api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/idl/api.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/idl/shorturl/shorturl.api" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/idl/shorturl/shorturl.api" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/api/idl/user/user.api" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/idl/user/user.api" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/internal/handler/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/routes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/internal/handler/user/getcurrentuserinfohandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/user/getcurrentuserhandler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/internal/handler/user/getuserinfohandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/user/getuserbyidhandler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/internal/handler/user/logouthandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/user/logouthandler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/internal/logic/user/logoutlogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/logic/user/logoutlogic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/api/internal/svc/servicecontext.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/svc/servicecontext.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/handler/routes.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/handler/user/getcurrentuserhandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/handler/user/getcurrentuserhandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/logic/user/getcurrentuserinfologic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/logic/user/getcurrentuserlogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/logic/user/getcurrentuserlogic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/logic/user/getuserinfologic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/internal/middleware/loginstatusmiddleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/middleware/loginstatusmiddleware.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/api/internal/types/types.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/internal/types/types.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/common/error/clienterror.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/common/error/clienterror.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/rpc/user/internal/error/clienterror.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/error/clienterror.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/common/error/clienterror.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/error/clienterror.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/common/error/servererror.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/error/servererror.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/common/user/userctxholder.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/etc/user.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/etc/user.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/internal/logic/checkloginstatuslogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/logic/checkloginstatuslogic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/internal/logic/getcurrentuserlogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/logic/getcurrentuserlogic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/internal/logic/loginlogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/logic/loginlogic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/internal/logic/logoutlogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/logic/logoutlogic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/internal/svc/servicecontext.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/svc/servicecontext.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/model/mysql/user/user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/mysql/user/user.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/model/mysql/user/usermodel.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/mysql/user/usermodel.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/model/mysql/user/usermodel_gen.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/mysql/user/usermodel_gen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/model/mysql/user/vars.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/mysql/user/vars.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/pb/user/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/pb/user/user.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/user.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Api Template" />
+        <option value="Go File" />
+      </list>
+    </option>
   </component>
   <component name="GOROOT" url="file://$PROJECT_DIR$/../../Go" />
   <component name="Git.Settings">
@@ -41,25 +78,63 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/qiniu/go-zero-project-framework/server/rpc/user&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultApiTemplateProperty": "Api Template",
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "D:/qiniu/go-zero-project-framework",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\qiniu\go-zero-project-framework" />
+      <recent name="D:\qiniu\go-zero-project-framework\server\rpc\item\internal\error" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\qiniu\go-zero-project-framework\internal" />
+      <recent name="D:\qiniu\go-zero-project-framework\server\rpc\item\pb" />
+      <recent name="D:\qiniu\go-zero-project-framework\server\model\mysql" />
+      <recent name="D:\qiniu\go-zero-project-framework\server\model\mysql\idl" />
+      <recent name="D:\qiniu\go-zero-project-framework\server\model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build go-zero-demo/server/rpc/item">
+    <configuration name="go build go-zero-demo/server/api" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-zero-project-framework" />
+      <working_directory value="$PROJECT_DIR$/server/api" />
+      <kind value="PACKAGE" />
+      <package value="go-zero-demo/server/api" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/server/api/api.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build go-zero-demo/server/rpc/item" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-zero-project-framework" />
+      <working_directory value="$PROJECT_DIR$/server/rpc/item" />
+      <kind value="PACKAGE" />
+      <package value="go-zero-demo/server/rpc/item" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/server/rpc/item/item.go" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build go-zero-demo/server/rpc/user" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-zero-project-framework" />
       <working_directory value="$PROJECT_DIR$/server/rpc/user" />
@@ -69,8 +144,15 @@
       <filePath value="$PROJECT_DIR$/server/rpc/user/user.go" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Go Build.go build go-zero-demo/server/rpc/item" />
+      <item itemvalue="Go Build.go build go-zero-demo/server/api" />
+      <item itemvalue="Go Build.go build go-zero-demo/server/rpc/user" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build go-zero-demo/server/rpc/item" />
+        <item itemvalue="Go Build.go build go-zero-demo/server/api" />
         <item itemvalue="Go Build.go build go-zero-demo/server/rpc/user" />
       </list>
     </recent_temporary>
@@ -78,6 +160,17 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat : user logout" />

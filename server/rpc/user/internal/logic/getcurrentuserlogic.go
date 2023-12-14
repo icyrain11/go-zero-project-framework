@@ -3,7 +3,7 @@ package logic
 import (
 	"context"
 	"fmt"
-	common "go-zero-demo/server/common/user"
+	"go-zero-demo/internal/user"
 	"go-zero-demo/server/rpc/user/internal/svc"
 	"go-zero-demo/server/rpc/user/pb/user"
 

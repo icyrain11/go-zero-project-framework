@@ -1,0 +1,60 @@
+syntax = "v1"
+
+
+type (
+    CreateUplaodTaskReq {
+        Type string `json:"type,options=[video,cover,avatar]"`
+    }
+
+    CreateUploadTaskResp {
+        UploadToken string `json:"uploadToken"`
+        FileAddr string `json:"fileAddr"`
+    }
+)
+
+type (
+    //创建视频
+    CreateVideo {
+
+    }
+)
+
+type (
+    CetVideoByIdReq {
+        Id int64 `path:"id"`
+    }
+    GetVideoByIdResp {
+        Id int64 `json:"id"`
+        UserId int64 `json:"userId"`
+
+    }
+)
+
+
+@server(
+    middleware : LoginStatus,Authorize
+    group : item
+    prefix : api/item
+)
+
+
+service api {
+    //创建上传任务
+    @handler CreateUploadTask
+    post / (CreateUplaodTaskReq) returns (CreateUploadTaskResp)
+    //上传视频
+    @handler CreateVideo
+    post /video () returns ()
+}
+
+@server(
+    group : item
+    prefix : api/item
+)
+
+service api {
+    //根据id获取视频
+    @handler GetVideoById
+    get /video/:id ()
+}
+

@@ -6,10 +6,10 @@ import (
 	"github.com/google/uuid"
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/x/errors"
-	common "go-zero-demo/server/common/user"
+	user3 "go-zero-demo/internal/model/mysql/user"
+	"go-zero-demo/internal/user"
 	error2 "go-zero-demo/server/rpc/user/internal/error"
 	"go-zero-demo/server/rpc/user/internal/svc"
-	user3 "go-zero-demo/server/rpc/user/model/mysql/user"
 	"go-zero-demo/server/rpc/user/pb/user"
 )
 

@@ -10,6 +10,4 @@ type Config struct {
 	MySql struct {
 		DataSource string
 	}
-
-	UserRpc zrpc.RpcClientConf
 }

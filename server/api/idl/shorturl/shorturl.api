@@ -10,12 +10,48 @@ type (
 
 type (
     CreateShortUrlReq {
-        originalUrl string `json:"originalUrl"`
+        OriginalUrl string `json:"originalUrl"`
     }
     CreateShorUrlResp {
 
     }
 )
+
+type (
+    RedirectShorUrlReq {
+        ShortUrl string `json:"shortUrl"`
+    }
+    RedirectShorUrlResp {
+        OriginalUrl string `json:"originalUrl"`
+    }
+)
+
+type (
+    GetTitleByUrlReq {
+        Url string `form:"url"`
+    }
+    GetTitleByUrlResp {
+        Title string `json:"title"`
+    }
+)
+
+@server(
+    group : shorturl
+    prefix : api/short-url
+)
+
+
+service api {
+    //生成短链接
+    @handler CreateShortUrl
+    post / (CreateShortUrlReq) returns (CreateShorUrlResp)
+    //短链接重定向
+    @handler RedirectShorUrl
+    get /:shortUrl (RedirectShorUrlReq) returns (RedirectShorUrlResp)
+    //获取目标网站的标题
+    @handler GetTitleByUrl
+    get /title (GetTitleByUrlReq) returns (GetTitleByUrlResp)
+}
 
 @server(
     middleware : LoginStatus,Authorize
@@ -24,9 +60,8 @@ type (
 )
 
 service api {
+    //通过id获取短链接
     @handler GetShortUrlById
     get /:id (GetShortUrlByIdReq)
-
-    @handler CreateShortUrl
-    post / (CreateShortUrlReq) returns (CreateShorUrlResp)
 }
+

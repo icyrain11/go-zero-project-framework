@@ -3,7 +3,7 @@ package logic
 import (
 	"context"
 	"github.com/zeromicro/x/errors"
-	error2 "go-zero-demo/server/common/error"
+	error2 "go-zero-demo/internal/error"
 	"go-zero-demo/server/rpc/user/internal/constant"
 	error3 "go-zero-demo/server/rpc/user/internal/error"
 	"go-zero-demo/server/rpc/user/internal/svc"

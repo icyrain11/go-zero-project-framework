@@ -46,3 +46,28 @@ type CreateShortUrlReq struct {
 
 type CreateShorUrlResp struct {
 }
+
+type RedirectShorUrlReq struct {
+	ShortUrl string `json:"shortUrl"`
+}
+
+type RedirectShorUrlResp struct {
+	OriginalUrl string `json:"originalUrl"`
+}
+
+type GetTitleByUrlReq struct {
+	Url string `form:"url"`
+}
+
+type GetTitleByUrlResp struct {
+	Title string `json:"title"`
+}
+
+type CreateUplaodTaskReq struct {
+	Type string `json:"type,options=[video,cover,avatar]"`
+}
+
+type CreateUploadTaskResp struct {
+	UploadToken string `json:"uploadToken"`
+	FileAddr    string `json:"fileAddr"`
+}

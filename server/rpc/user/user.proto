@@ -33,7 +33,7 @@ message LogoutResp {
 }
 
 message GetCurrentUseReq {
-
+  string Token = 1;
 }
 
 message GetCurrentUserResp {
