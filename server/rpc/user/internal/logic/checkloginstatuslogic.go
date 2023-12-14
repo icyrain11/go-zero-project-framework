@@ -6,7 +6,9 @@ import (
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/x/errors"
 	error2 "go-zero-demo/server/common/error"
+	common "go-zero-demo/server/common/user"
 	"go-zero-demo/server/rpc/user/internal/constant"
+	error3 "go-zero-demo/server/rpc/user/internal/error"
 	"go-zero-demo/server/rpc/user/internal/svc"
 	"go-zero-demo/server/rpc/user/pb/user"
 )
@@ -26,6 +28,7 @@ func NewCheckLoginStatusLogic(ctx context.Context, svcCtx *svc.ServiceContext) *
 }
 
 func (l *CheckLoginStatusLogic) CheckLoginStatus(in *user.CheckLoginStatusReq) (out *user.CheckLoginStatusResp, err error) {
+
 	token := in.Token
 
 	//Token是否有效
@@ -41,11 +44,12 @@ func (l *CheckLoginStatusLogic) CheckLoginStatus(in *user.CheckLoginStatusReq) (
 	}
 
 	return &user.CheckLoginStatusResp{
-		UserCtx: userCtx,
+		Id:       userCtx.Id,
+		Username: userCtx.Username,
 	}, nil
 }
 
-func (l *CheckLoginStatusLogic) isValidToken(token string) (userCtx *user.UserCtx, err error) {
+func (l *CheckLoginStatusLogic) isValidToken(token string) (userCtx *common.UserCtx, err error) {
 
 	userCtxStr, err := l.svcCtx.Redis.GetCtx(l.ctx, constant.UserLoginKey+token)
 
@@ -55,9 +59,15 @@ func (l *CheckLoginStatusLogic) isValidToken(token string) (userCtx *user.UserCt
 		return nil, err
 	}
 
-	userCtx = &user.UserCtx{}
+	//未登录
+	if userCtxStr == "" {
+		err = errors.New(error3.UserNotLoginErrorCode, error3.UserNotLoginErrorMsg)
+		return nil, err
+	}
+
 	//反序列化
 	err = json.Unmarshal([]byte(userCtxStr), userCtx)
+
 	if err != nil {
 		l.Logger.Errorf("Json Unmarshal Error %v", err)
 		err = errors.New(error2.JsonUnmarshalErrorCode, error2.ServerInternalErrorMsg)
@@ -67,8 +77,9 @@ func (l *CheckLoginStatusLogic) isValidToken(token string) (userCtx *user.UserCt
 }
 
 func (l *CheckLoginStatusLogic) refreshToken(token string) (err error) {
-	err = l.svcCtx.Redis.Expire(constant.UserLoginKey+token, 86400)
+	err = l.svcCtx.Redis.Expire(constant.UserLoginKey+token, constant.UserLoginExpireTime)
 	if err != nil {
+		l.Logger.Errorf("Redis Expire Error %v", err)
 		err = errors.New(error2.RedisExpireErrorCode, error2.ServerInternalErrorMsg)
 		return err
 	}

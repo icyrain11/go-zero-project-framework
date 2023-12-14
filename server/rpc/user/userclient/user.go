@@ -21,7 +21,6 @@ type (
 	LoginResp            = user.LoginResp
 	LogoutReq            = user.LogoutReq
 	LogoutResp           = user.LogoutResp
-	UserCtx              = user.UserCtx
 
 	User interface {
 		Login(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*LoginResp, error)
