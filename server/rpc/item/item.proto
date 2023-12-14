@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package item;
+option go_package = "./item";
+
+
+message CreateUploadTaskReq {
+  string Type = 1;
+}
+
+message CreateUploadTaskResp {
+  string FileAddr = 1;
+  string UploadToken = 2;
+  string DefaultCoverAddr = 3;
+  string PreviewAddr = 4;
+}
+
+message GetVideoByIdReq {
+  int64 Id = 1;
+}
+
+message GetVideoByIdResp {
+  int64 Id = 1;
+  int64 UserId = 2;
+  int64 JobId = 3;
+  int64 Status = 4;
+  string Description = 5;
+  string FileAddr = 6;    // 视频文件url地址
+  string CoverAddr = 7;
+}
+
+service Item {
+  rpc CreateUploadTask(CreateUploadTaskReq) returns(CreateUploadTaskResp);
+  rpc GetVideoById (GetVideoByIdReq) returns (GetVideoByIdResp);
+}

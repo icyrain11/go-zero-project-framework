@@ -1,0 +1,11 @@
+Name: item.rpc
+ListenOn: 0.0.0.0:8081
+
+MySql:
+  DataSource: root:pass@tcp(127.0.0.1:3306)/go-zero?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai
+
+Redis:
+  Key: item-service
+  Host: 127.0.0.1:6379
+  Type: node
+  Tls: false
