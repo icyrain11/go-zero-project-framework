@@ -20,6 +20,7 @@ func NewServiceContext(c config.Config) *ServiceContext {
 	sqlConn := sqlx.NewMysql(c.MySql.DataSource)
 	//链接Redis
 	rds := redis.MustNewRedis(c.Redis.RedisConf)
+	//TODO 新建一个七牛云OSS
 	return &ServiceContext{
 		Config:          c,
 		Redis:           rds,

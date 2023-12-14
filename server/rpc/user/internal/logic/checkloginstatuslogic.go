@@ -32,7 +32,7 @@ func (l *CheckLoginStatusLogic) CheckLoginStatus(in *user.CheckLoginStatusReq) (
 	token := in.Token
 
 	//Token是否有效
-	userCtx, err := l.isValidToken(token)
+	userCtx, err := l.validToken(token)
 	if err != nil {
 		return nil, err
 	}
@@ -49,10 +49,9 @@ func (l *CheckLoginStatusLogic) CheckLoginStatus(in *user.CheckLoginStatusReq) (
 	}, nil
 }
 
-func (l *CheckLoginStatusLogic) isValidToken(token string) (userCtx *common.UserCtx, err error) {
+func (l *CheckLoginStatusLogic) validToken(token string) (userCtx *common.UserCtx, err error) {
 
 	userCtxStr, err := l.svcCtx.Redis.GetCtx(l.ctx, constant.UserLoginKey+token)
-
 	if err != nil {
 		l.Logger.Errorf("Redis Get Error %v", err)
 		err = errors.New(error2.RedisGetErrorCode, error2.ServerInternalErrorMsg)
@@ -66,7 +65,7 @@ func (l *CheckLoginStatusLogic) isValidToken(token string) (userCtx *common.User
 	}
 
 	//反序列化
-	err = json.Unmarshal([]byte(userCtxStr), userCtx)
+	err = json.Unmarshal([]byte(userCtxStr), &userCtx)
 
 	if err != nil {
 		l.Logger.Errorf("Json Unmarshal Error %v", err)

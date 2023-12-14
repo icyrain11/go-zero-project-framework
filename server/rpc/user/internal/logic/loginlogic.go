@@ -6,8 +6,10 @@ import (
 	"github.com/google/uuid"
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/x/errors"
+	error3 "go-zero-demo/internal/error"
 	user3 "go-zero-demo/internal/model/mysql/user"
 	"go-zero-demo/internal/user"
+	"go-zero-demo/server/rpc/user/internal/constant"
 	error2 "go-zero-demo/server/rpc/user/internal/error"
 	"go-zero-demo/server/rpc/user/internal/svc"
 	"go-zero-demo/server/rpc/user/pb/user"
@@ -63,7 +65,7 @@ func (l *LoginLogic) buildAndSetToken(user *user3.User) (token string, err error
 	token = newUUID.String()
 	if err != nil {
 		l.Logger.Errorf("UUID Generate Error %v", err)
-		err = errors.New(50001, "服务器繁忙")
+		err = errors.New(error3.UUIDGenerateErrorCode, error3.ServerInternalErrorMsg)
 		return "", err
 	}
 
@@ -74,7 +76,7 @@ func (l *LoginLogic) buildAndSetToken(user *user3.User) (token string, err error
 
 	userCtxStr, err := json.Marshal(userCtx)
 
-	err = l.svcCtx.Redis.SetexCtx(l.ctx, "user:login:"+token, string(userCtxStr), 86400)
+	err = l.svcCtx.Redis.SetexCtx(l.ctx, constant.UserLoginKey+token, string(userCtxStr), 86400)
 
 	if err != nil {
 		l.Logger.Errorf("Redis SetEx Error %v", err)

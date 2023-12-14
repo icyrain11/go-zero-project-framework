@@ -26,6 +26,7 @@ type UserClient interface {
 	CheckLoginStatus(ctx context.Context, in *CheckLoginStatusReq, opts ...grpc.CallOption) (*CheckLoginStatusResp, error)
 	GetCurrentUser(ctx context.Context, in *GetCurrentUseReq, opts ...grpc.CallOption) (*GetCurrentUserResp, error)
 	Logout(ctx context.Context, in *LogoutReq, opts ...grpc.CallOption) (*LogoutResp, error)
+	GetUserById(ctx context.Context, in *GetUserByIdReq, opts ...grpc.CallOption) (*GetUserByIdResp, error)
 }
 
 type userClient struct {
@@ -72,6 +73,15 @@ func (c *userClient) Logout(ctx context.Context, in *LogoutReq, opts ...grpc.Cal
 	return out, nil
 }
 
+func (c *userClient) GetUserById(ctx context.Context, in *GetUserByIdReq, opts ...grpc.CallOption) (*GetUserByIdResp, error) {
+	out := new(GetUserByIdResp)
+	err := c.cc.Invoke(ctx, "/user.User/GetUserById", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // UserServer is the server API for User service.
 // All implementations must embed UnimplementedUserServer
 // for forward compatibility
@@ -80,6 +90,7 @@ type UserServer interface {
 	CheckLoginStatus(context.Context, *CheckLoginStatusReq) (*CheckLoginStatusResp, error)
 	GetCurrentUser(context.Context, *GetCurrentUseReq) (*GetCurrentUserResp, error)
 	Logout(context.Context, *LogoutReq) (*LogoutResp, error)
+	GetUserById(context.Context, *GetUserByIdReq) (*GetUserByIdResp, error)
 	mustEmbedUnimplementedUserServer()
 }
 
@@ -98,6 +109,9 @@ func (UnimplementedUserServer) GetCurrentUser(context.Context, *GetCurrentUseReq
 }
 func (UnimplementedUserServer) Logout(context.Context, *LogoutReq) (*LogoutResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Logout not implemented")
+}
+func (UnimplementedUserServer) GetUserById(context.Context, *GetUserByIdReq) (*GetUserByIdResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserById not implemented")
 }
 func (UnimplementedUserServer) mustEmbedUnimplementedUserServer() {}
 
@@ -184,6 +198,24 @@ func _User_Logout_Handler(srv interface{}, ctx context.Context, dec func(interfa
 	return interceptor(ctx, in, info, handler)
 }
 
+func _User_GetUserById_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetUserByIdReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).GetUserById(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/user.User/GetUserById",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).GetUserById(ctx, req.(*GetUserByIdReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // User_ServiceDesc is the grpc.ServiceDesc for User service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -206,6 +238,10 @@ var User_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "Logout",
 			Handler:    _User_Logout_Handler,
+		},
+		{
+			MethodName: "GetUserById",
+			Handler:    _User_GetUserById_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

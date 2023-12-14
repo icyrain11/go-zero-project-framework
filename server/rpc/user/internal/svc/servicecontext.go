@@ -1,6 +1,7 @@
 package svc
 
 import (
+	"fmt"
 	"github.com/zeromicro/go-zero/core/stores/redis"
 	"github.com/zeromicro/go-zero/core/stores/sqlx"
 	"go-zero-demo/internal/model/mysql/user"
@@ -18,6 +19,7 @@ func NewServiceContext(c config.Config) *ServiceContext {
 	sqlConn := sqlx.NewMysql(c.MySql.DataSource)
 	//链接Redis
 	rds := redis.MustNewRedis(c.Redis.RedisConf)
+	fmt.Println(rds)
 	return &ServiceContext{
 		Config:    c,
 		Redis:     rds,

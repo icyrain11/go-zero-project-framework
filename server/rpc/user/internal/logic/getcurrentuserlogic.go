@@ -27,7 +27,6 @@ func NewGetCurrentUserLogic(ctx context.Context, svcCtx *svc.ServiceContext) *Ge
 func (l *GetCurrentUserLogic) GetCurrentUser(in *user.GetCurrentUseReq) (*user.GetCurrentUserResp, error) {
 	// todo: add your logic here and delete this line
 	userCtx := l.ctx.Value("userCtx").(*common.UserCtx)
-	id := userCtx.Id
-	fmt.Println(id)
+	fmt.Println(userCtx)
 	return &user.GetCurrentUserResp{}, nil
 }

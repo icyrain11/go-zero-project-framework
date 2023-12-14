@@ -41,3 +41,8 @@ func (s *UserServer) Logout(ctx context.Context, in *user.LogoutReq) (*user.Logo
 	l := logic.NewLogoutLogic(ctx, s.svcCtx)
 	return l.Logout(in)
 }
+
+func (s *UserServer) GetUserById(ctx context.Context, in *user.GetUserByIdReq) (*user.GetUserByIdResp, error) {
+	l := logic.NewGetUserByIdLogic(ctx, s.svcCtx)
+	return l.GetUserById(in)
+}

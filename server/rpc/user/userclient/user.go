@@ -17,6 +17,8 @@ type (
 	CheckLoginStatusResp = user.CheckLoginStatusResp
 	GetCurrentUseReq     = user.GetCurrentUseReq
 	GetCurrentUserResp   = user.GetCurrentUserResp
+	GetUserByIdReq       = user.GetUserByIdReq
+	GetUserByIdResp      = user.GetUserByIdResp
 	LoginReq             = user.LoginReq
 	LoginResp            = user.LoginResp
 	LogoutReq            = user.LogoutReq
@@ -27,6 +29,7 @@ type (
 		CheckLoginStatus(ctx context.Context, in *CheckLoginStatusReq, opts ...grpc.CallOption) (*CheckLoginStatusResp, error)
 		GetCurrentUser(ctx context.Context, in *GetCurrentUseReq, opts ...grpc.CallOption) (*GetCurrentUserResp, error)
 		Logout(ctx context.Context, in *LogoutReq, opts ...grpc.CallOption) (*LogoutResp, error)
+		GetUserById(ctx context.Context, in *GetUserByIdReq, opts ...grpc.CallOption) (*GetUserByIdResp, error)
 	}
 
 	defaultUser struct {
@@ -58,4 +61,9 @@ func (m *defaultUser) GetCurrentUser(ctx context.Context, in *GetCurrentUseReq, 
 func (m *defaultUser) Logout(ctx context.Context, in *LogoutReq, opts ...grpc.CallOption) (*LogoutResp, error) {
 	client := user.NewUserClient(m.cli.Conn())
 	return client.Logout(ctx, in, opts...)
+}
+
+func (m *defaultUser) GetUserById(ctx context.Context, in *GetUserByIdReq, opts ...grpc.CallOption) (*GetUserByIdResp, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.GetUserById(ctx, in, opts...)
 }

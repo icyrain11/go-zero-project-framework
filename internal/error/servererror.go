@@ -6,6 +6,7 @@ const (
 	RedisDelErrorCode
 	JsonUnmarshalErrorCode
 	DocumentFromReaderErrorCode
+	UUIDGenerateErrorCode
 )
 
 const (
