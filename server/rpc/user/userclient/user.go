@@ -25,9 +25,9 @@ type (
 
 	User interface {
 		Login(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*LoginResp, error)
-		Logout(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*LogoutResp, error)
 		CheckLoginStatus(ctx context.Context, in *CheckLoginStatusReq, opts ...grpc.CallOption) (*CheckLoginStatusResp, error)
 		GetCurrentUser(ctx context.Context, in *GetCurrentUseReq, opts ...grpc.CallOption) (*GetCurrentUserResp, error)
+		Logout(ctx context.Context, in *LogoutReq, opts ...grpc.CallOption) (*LogoutResp, error)
 	}
 
 	defaultUser struct {
@@ -46,11 +46,6 @@ func (m *defaultUser) Login(ctx context.Context, in *LoginReq, opts ...grpc.Call
 	return client.Login(ctx, in, opts...)
 }
 
-func (m *defaultUser) Logout(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*LogoutResp, error) {
-	client := user.NewUserClient(m.cli.Conn())
-	return client.Logout(ctx, in, opts...)
-}
-
 func (m *defaultUser) CheckLoginStatus(ctx context.Context, in *CheckLoginStatusReq, opts ...grpc.CallOption) (*CheckLoginStatusResp, error) {
 	client := user.NewUserClient(m.cli.Conn())
 	return client.CheckLoginStatus(ctx, in, opts...)
@@ -59,4 +54,9 @@ func (m *defaultUser) CheckLoginStatus(ctx context.Context, in *CheckLoginStatus
 func (m *defaultUser) GetCurrentUser(ctx context.Context, in *GetCurrentUseReq, opts ...grpc.CallOption) (*GetCurrentUserResp, error) {
 	client := user.NewUserClient(m.cli.Conn())
 	return client.GetCurrentUser(ctx, in, opts...)
+}
+
+func (m *defaultUser) Logout(ctx context.Context, in *LogoutReq, opts ...grpc.CallOption) (*LogoutResp, error) {
+	client := user.NewUserClient(m.cli.Conn())
+	return client.Logout(ctx, in, opts...)
 }

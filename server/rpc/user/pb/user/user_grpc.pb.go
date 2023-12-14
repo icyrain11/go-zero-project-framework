@@ -23,9 +23,9 @@ const _ = grpc.SupportPackageIsVersion7
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type UserClient interface {
 	Login(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*LoginResp, error)
-	Logout(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*LogoutResp, error)
 	CheckLoginStatus(ctx context.Context, in *CheckLoginStatusReq, opts ...grpc.CallOption) (*CheckLoginStatusResp, error)
 	GetCurrentUser(ctx context.Context, in *GetCurrentUseReq, opts ...grpc.CallOption) (*GetCurrentUserResp, error)
+	Logout(ctx context.Context, in *LogoutReq, opts ...grpc.CallOption) (*LogoutResp, error)
 }
 
 type userClient struct {
@@ -39,15 +39,6 @@ func NewUserClient(cc grpc.ClientConnInterface) UserClient {
 func (c *userClient) Login(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*LoginResp, error) {
 	out := new(LoginResp)
 	err := c.cc.Invoke(ctx, "/user.User/Login", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *userClient) Logout(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*LogoutResp, error) {
-	out := new(LogoutResp)
-	err := c.cc.Invoke(ctx, "/user.User/Logout", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -72,14 +63,23 @@ func (c *userClient) GetCurrentUser(ctx context.Context, in *GetCurrentUseReq, o
 	return out, nil
 }
 
+func (c *userClient) Logout(ctx context.Context, in *LogoutReq, opts ...grpc.CallOption) (*LogoutResp, error) {
+	out := new(LogoutResp)
+	err := c.cc.Invoke(ctx, "/user.User/Logout", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // UserServer is the server API for User service.
 // All implementations must embed UnimplementedUserServer
 // for forward compatibility
 type UserServer interface {
 	Login(context.Context, *LoginReq) (*LoginResp, error)
-	Logout(context.Context, *LoginReq) (*LogoutResp, error)
 	CheckLoginStatus(context.Context, *CheckLoginStatusReq) (*CheckLoginStatusResp, error)
 	GetCurrentUser(context.Context, *GetCurrentUseReq) (*GetCurrentUserResp, error)
+	Logout(context.Context, *LogoutReq) (*LogoutResp, error)
 	mustEmbedUnimplementedUserServer()
 }
 
@@ -90,14 +90,14 @@ type UnimplementedUserServer struct {
 func (UnimplementedUserServer) Login(context.Context, *LoginReq) (*LoginResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Login not implemented")
 }
-func (UnimplementedUserServer) Logout(context.Context, *LoginReq) (*LogoutResp, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Logout not implemented")
-}
 func (UnimplementedUserServer) CheckLoginStatus(context.Context, *CheckLoginStatusReq) (*CheckLoginStatusResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CheckLoginStatus not implemented")
 }
 func (UnimplementedUserServer) GetCurrentUser(context.Context, *GetCurrentUseReq) (*GetCurrentUserResp, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetCurrentUser not implemented")
+}
+func (UnimplementedUserServer) Logout(context.Context, *LogoutReq) (*LogoutResp, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Logout not implemented")
 }
 func (UnimplementedUserServer) mustEmbedUnimplementedUserServer() {}
 
@@ -126,24 +126,6 @@ func _User_Login_Handler(srv interface{}, ctx context.Context, dec func(interfac
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(UserServer).Login(ctx, req.(*LoginReq))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _User_Logout_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(LoginReq)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(UserServer).Logout(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/user.User/Logout",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).Logout(ctx, req.(*LoginReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -184,6 +166,24 @@ func _User_GetCurrentUser_Handler(srv interface{}, ctx context.Context, dec func
 	return interceptor(ctx, in, info, handler)
 }
 
+func _User_Logout_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(LogoutReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).Logout(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/user.User/Logout",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).Logout(ctx, req.(*LogoutReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // User_ServiceDesc is the grpc.ServiceDesc for User service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -196,16 +196,16 @@ var User_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _User_Login_Handler,
 		},
 		{
-			MethodName: "Logout",
-			Handler:    _User_Logout_Handler,
-		},
-		{
 			MethodName: "CheckLoginStatus",
 			Handler:    _User_CheckLoginStatus_Handler,
 		},
 		{
 			MethodName: "GetCurrentUser",
 			Handler:    _User_GetCurrentUser_Handler,
+		},
+		{
+			MethodName: "Logout",
+			Handler:    _User_Logout_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -41,15 +41,15 @@ message GetCurrentUseReq {
 
 message GetCurrentUserResp {
   int64 Id = 1;
-  string  Username = 2;
+  string Username = 2;
   string Nickname = 3;
-  string   Gender = 4;
+  string Gender = 4;
   string Mobile = 5;
 }
 
 service User {
   rpc Login(LoginReq) returns(LoginResp);
-  rpc Logout(LoginReq) returns (LogoutResp);
   rpc CheckLoginStatus (CheckLoginStatusReq) returns(CheckLoginStatusResp);
   rpc GetCurrentUser (GetCurrentUseReq)returns (GetCurrentUserResp);
+  rpc Logout(LogoutReq) returns (LogoutResp);
 }

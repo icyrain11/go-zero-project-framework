@@ -4,19 +4,21 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9321bc3f-55be-44ef-9e96-4b24e3637bbd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/go-zero-project-framework.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6148c690-21fc-4e91-9b37-9c7f4f5275fe.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6148c690-21fc-4e91-9b37-9c7f4f5275fe/storage_v2/_src_/schema/go-zero.beS-CA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6148c690-21fc-4e91-9b37-9c7f4f5275fe/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6148c690-21fc-4e91-9b37-9c7f4f5275fe/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6148c690-21fc-4e91-9b37-9c7f4f5275fe/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6148c690-21fc-4e91-9b37-9c7f4f5275fe/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/go-zero-demo.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+    <list default="true" id="793c534e-115c-4e14-9985-fe1318326702" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-12-13_22_31_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-12-13_22_31__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/doc/shorturl/shorturl.api" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/doc/shorturl/shorturl.api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/api/doc/user/user.api" beforeDir="false" afterPath="$PROJECT_DIR$/server/api/doc/user/user.api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/common/error/servererror.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/common/error/servererror.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/internal/error/clienterror.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/error/clienterror.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/internal/logic/checkloginstatuslogic.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/internal/logic/checkloginstatuslogic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/internal/logic/logoutlogic.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/internal/server/userserver.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/pb/user/user.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/pb/user/user.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/pb/user/user_grpc.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/pb/user/user_grpc.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/rpc/user/userclient/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/rpc/user/userclient/user.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,30 +32,48 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
-  <component name="ProjectId" id="2ZUXkpIoAVmobgXlRPBF1yAA1Ad" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2ZVxn79PzPk7Q8Pszm0MDCCYcSl" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "C:/Users/73493",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/qiniu/go-zero-project-framework/server/rpc/user&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="go build go-zero-demo/server/rpc/user" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-zero-project-framework" />
+      <working_directory value="$PROJECT_DIR$/server/rpc/user" />
+      <kind value="PACKAGE" />
+      <package value="go-zero-demo/server/rpc/user" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/server/rpc/user/user.go" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build go-zero-demo/server/rpc/user" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />

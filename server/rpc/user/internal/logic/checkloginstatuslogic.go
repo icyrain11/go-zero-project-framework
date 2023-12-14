@@ -46,6 +46,7 @@ func (l *CheckLoginStatusLogic) CheckLoginStatus(in *user.CheckLoginStatusReq) (
 }
 
 func (l *CheckLoginStatusLogic) isValidToken(token string) (userCtx *user.UserCtx, err error) {
+
 	userCtxStr, err := l.svcCtx.Redis.GetCtx(l.ctx, constant.UserLoginKey+token)
 
 	if err != nil {

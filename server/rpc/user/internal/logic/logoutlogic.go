@@ -2,7 +2,10 @@ package logic
 
 import (
 	"context"
-
+	"github.com/zeromicro/x/errors"
+	error2 "go-zero-demo/server/common/error"
+	"go-zero-demo/server/rpc/user/internal/constant"
+	error3 "go-zero-demo/server/rpc/user/internal/error"
 	"go-zero-demo/server/rpc/user/internal/svc"
 	"go-zero-demo/server/rpc/user/pb/user"
 
@@ -23,8 +26,20 @@ func NewLogoutLogic(ctx context.Context, svcCtx *svc.ServiceContext) *LogoutLogi
 	}
 }
 
-func (l *LogoutLogic) Logout(in *user.LoginReq) (*user.LogoutResp, error) {
-	// todo: add your logic here and delete this line
+func (l *LogoutLogic) Logout(in *user.LogoutReq) (*user.LogoutResp, error) {
+	token := in.Token
+
+	del, err := l.svcCtx.Redis.Del(constant.UserLoginKey + token)
+	if err != nil {
+		err = errors.New(error2.RedisDelErrorCode, error2.ServerInternalErrorMsg)
+		l.Logger.Errorf("Redis Del Error %v", err)
+		return nil, err
+	}
+
+	if del < 1 {
+		err = errors.New(error3.UserNotLoginErrorCode, error3.UserNotLoginErrorMsg)
+		return nil, err
+	}
 
 	return &user.LogoutResp{}, nil
 }

@@ -3,6 +3,7 @@ package error
 const (
 	RedisGetErrorCode = 50001 + iota
 	RedisExpireErrorCode
+	RedisDelErrorCode
 	JsonUnmarshalErrorCode
 )
 

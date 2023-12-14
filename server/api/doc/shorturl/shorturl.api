@@ -12,6 +12,9 @@ type (
     CreateShortUrlReq {
         originalUrl string `json:"originalUrl"`
     }
+    CreateShorUrlResp {
+
+    }
 )
 
 @server(
@@ -25,5 +28,5 @@ service api {
     get /:id (GetShortUrlByIdReq)
 
     @handler CreateShortUrl
-    post / (CreateShortUrlReq)
+    post / (CreateShortUrlReq) returns (CreateShorUrlResp)
 }

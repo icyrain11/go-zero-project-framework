@@ -17,11 +17,23 @@ type (
 
 type (
     //通过id获取用户
-    GetUserInfoReq {
+    GetUserByIdReq {
         Id int64 `path:"id"`
     }
+
+    GetCurrentUserReq {
+        Id int64 `path:"id"`
+    }
+
+    GetCurrentUserResp {
+        Id int64 `json:"id"`
+        Username string `json:"username"`
+        Nickname string `json:"nickname"`
+        Gender string `json:"gender"`
+        Mobile string `json:"mobile"`
+    }
         // 定义登录接口的响应体
-    GetUserInfoResp {
+    GetUserByIdResp {
         Id int64 `json:"id"`
         Username string `json:"username"`
         Nickname string `json:"nickname"`
@@ -42,8 +54,8 @@ service api {
     post /login (LoginReq) returns (LoginResp)
 
     //获取用户信息
-    @handler GetUserInfo
-    get /info/:id (GetUserInfoReq) returns (GetUserInfoResp)
+    @handler GetUserById
+    get /info/:id (GetUserByIdReq) returns (GetUserByIdResp)
 }
 
 @server(
@@ -54,8 +66,8 @@ service api {
 
 service api {
     //获取当前登录用户
-    @handler GetCurrentUserInfo
-    get /info/current returns (GetUserInfoResp)
+    @handler GetCurrentUser
+    get /info/current returns (GetCurrentUserResp)
     //退出登录
     @handler Logout
     post /logout
